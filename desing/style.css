@@ -1,0 +1,185 @@
+:root {
+  /*primary*/
+  --Blue: hsl(223, 87%, 63%);
+  /*Secondary*/
+  --PaleBlue: hsl(223, 100%, 88%);
+  --LightRed: hsl(354, 100%, 66%);
+  /*Neutral*/
+  --Gray: hsl(0, 0%, 59%);
+  --VeryDarkBlue: hsl(209, 33%, 12%);
+}
+body {
+  padding: 0 20px 0 20px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Libre Franklin", sans-serif;
+}
+.logo {
+  margin-top: 100px;
+  width: 70px;
+}
+.main_msj {
+  display: grid;
+  gap: 0;
+  margin: 35px 0;
+}
+.welcome_msj {
+  font-size: 28px;
+  color: var(--Gray);
+  margin: 0;
+}
+.subscribe {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: var(--Gray);
+}
+.welcome_msj strong {
+  color: black;
+}
+.send_email {
+  border-radius: 20px;
+  border: 1px var(--PaleBlue) solid;
+  width: 250px;
+  height: 34px;
+  margin: 0;
+}
+input[type] {
+  font-size: 14px;
+  padding-left: 20px;
+  outline: 0;
+  color: var(--Gray);
+  font-weight: 300;
+}
+input.active {
+  border: 1px solid var(--LightRed);
+}
+form {
+  display: grid;
+  justify-content: center;
+  gap: 5px;
+}
+.msj_error {
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--LightRed);
+  opacity: 0;
+  max-height: 0;
+  margin: 0;
+  transition: opacity 0.3s ease, max-heigth 0.3s ease;
+}
+.msj_error.active {
+  opacity: 1;
+  max-height: 40px;
+}
+.button_notify {
+  width: 274px;
+  height: 35px;
+  background-color: var(--Blue);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  margin: 0;
+  font-size: medium;
+  box-shadow: 0px 4px 6px hsla(223, 87%, 63%, 0.5);
+  cursor: pointer;
+  transition: transform 0.4s ease-out;
+}
+.button_notify:active {
+  transform: scale(0.9);
+}
+.main_img {
+  margin: 80px 0;
+}
+.presetation {
+  width: 335px;
+}
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 40px;
+  gap: 25px;
+}
+.social div {
+  color: var(--Blue);
+  border: 1px solid hsla(223, 87%, 63%, 0.3);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out;
+}
+.social i {
+  height: 0;
+}
+.social div:hover {
+  background-color: var(--Blue);
+  color: white;
+  box-shadow: 0 0 10px hsl(223, 87%, 80%), 0 0 20px hsl(223, 87%, 80%),
+    0 0 30px hsl(223, 87%, 80%);
+}
+.reserved {
+  font-size: 12px;
+  color: var(--Gray);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media screen and (min-width: 740px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    margin-top: 50px;
+  }
+  form {
+    width: 600px;
+    display: flex;
+  }
+  .send_email {
+    margin: 0;
+    padding: 0;
+    width: 370px;
+    height: 40px;
+  }
+  .button_notify {
+    margin: 0;
+    margin: 0;
+    width: 200px;
+    height: 40px;
+  }
+  .msj_error {
+    position: absolute;
+    transform: translate(-100px, 50px);
+  }
+  .presetation {
+    width: 600px;
+    margin-top: -50px;
+  }
+  .social {
+    margin-top: -50px;
+  }
+  footer {
+    margin-top: -10px;
+  }
+  .welcome_msj {
+    font-size: 37px;
+  }
+  .subscribe {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+}
